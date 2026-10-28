@@ -41,27 +41,6 @@ La passerelle n'expose pas de « production » en tant que telle : un compteur/p
 
 Tableau de bord Énergie : **Réseau** → consommation = *Énergie importée* du GMD, retour = *Énergie exportée* du GMD ; **Panneaux solaires** → *Énergie produite* de l'installation.
 
-## Protocole (pour le débogage)
-
-```bash
-curl -s -X POST http://192.168.1.141/rpc -H 'Content-Type: application/json' -d '{"method":"getDevices"}'
-```
-Réponse : `{"result":[{"ethMac":…,"plcMac":…,"deviceType":"MST","status":"online","power":129.5,"firmware":"2.06/2.87"}, …]}`
-Commande : `{"method":"setDeviceState","parameters":{"mac":"<MAC>","state":true}}` (MAC Ethernet pour ETH, MAC CPL pour SW/TPH).
-
-## Sécurité
-
-L'API locale n'a, sur l'installation de référence, ni mot de passe ni chiffrement : n'exposez jamais la passerelle sur Internet. La mise à jour de firmware (`/upgrade`) n'est volontairement pas implémentée. Ne modifiez pas le champ « Server URL » de la passerelle : c'est lui qui la relie au cloud MyLight.
-
-## Développement
-
-```bash
-docker compose up -d                    # HA + votre vraie passerelle
-docker compose --profile mock up -d     # HA + fausse passerelle (dev/mock_gateway.py)
-docker compose restart homeassistant    # après modification du code
-```
-Ouvrez http://localhost:8123, ajoutez l'intégration avec `192.168.1.141` (réelle) ou `mock-gateway:8099` (fausse). Sans Docker : `python3 dev/mock_gateway.py` puis `<IP du PC>:8099`.
-
 ## Licence
 
 MIT, voir [LICENSE](LICENSE).

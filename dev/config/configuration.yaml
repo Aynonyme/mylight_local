@@ -1,6 +1,0 @@
-default_config:
-
-logger:
-  default: warning
-  logs:
-    custom_components.mylight_local: debug
