@@ -7,6 +7,8 @@
 
 Intégration **100 % locale** : elle interroge l'interface web de la SmartPlug Master (prise rouge, firmware 1.5.3) via son API JSON-RPC `/rpc`, sans passer par le cloud MyLight.
 
+*Intégration entièrement générée par IA, utilise les valeurs de production/consommation mesurées par les SmartPlugs Mylight, ne supporte pas la batterie virtuelle*
+
 > Projet communautaire, **non affilié à MyLight Systems**. Le logo appartient à MyLight Systems. Développé à partir de l'interface web de la passerelle, sans documentation officielle : testé uniquement sur le firmware 1.5.3.
 
 ## Installation
