@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MyLight gateway (SmartPlug Master)",
+        "description": "IP address of the red plug (local web interface). Credentials only if your gateway requires authentication.",
+        "data": {
+          "host": "IP address",
+          "username": "Username (optional)",
+          "password": "Password (optional)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Authentication required",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the gateway or unexpected response.",
+      "invalid_auth": "Credentials rejected.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This gateway is already configured.",
+      "reauth_successful": "Authentication updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Polling interval (seconds)",
+          "production_device": "Solar production device"
+        },
+        "data_description": {
+          "production_device": "Three-phase plug or other device measuring production. Enables the 'MyLight installation' sensors."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "power": {
+        "name": "Power"
+      },
+      "power_p1": {
+        "name": "Power phase 1"
+      },
+      "power_p2": {
+        "name": "Power phase 2"
+      },
+      "power_p3": {
+        "name": "Power phase 3"
+      },
+      "energy": {
+        "name": "Energy"
+      },
+      "energy_import": {
+        "name": "Energy imported"
+      },
+      "energy_export": {
+        "name": "Energy exported"
+      },
+      "status": {
+        "name": "Status"
+      },
+      "production_power": {
+        "name": "Solar production"
+      },
+      "grid_power": {
+        "name": "Grid power"
+      },
+      "house_power": {
+        "name": "House consumption"
+      },
+      "production_energy": {
+        "name": "Energy produced"
+      },
+      "house_energy": {
+        "name": "House energy consumed"
+      }
+    }
+  }
+}

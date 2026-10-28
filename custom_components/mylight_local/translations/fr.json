@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Passerelle MyLight (SmartPlug Master)",
+        "description": "Adresse IP de la prise rouge (interface web locale). Identifiants uniquement si votre passerelle demande une authentification.",
+        "data": {
+          "host": "Adresse IP",
+          "username": "Utilisateur (optionnel)",
+          "password": "Mot de passe (optionnel)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Authentification requise",
+        "data": {
+          "username": "Utilisateur",
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de joindre la passerelle ou réponse inattendue.",
+      "invalid_auth": "Identifiants refusés.",
+      "unknown": "Erreur inattendue."
+    },
+    "abort": {
+      "already_configured": "Cette passerelle est déjà configurée.",
+      "reauth_successful": "Authentification mise à jour."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Intervalle d'interrogation (secondes)",
+          "production_device": "Appareil de production solaire"
+        },
+        "data_description": {
+          "production_device": "Prise triphasée ou autre appareil qui mesure la production. Active les capteurs « Installation MyLight »."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "power": {
+        "name": "Puissance"
+      },
+      "power_p1": {
+        "name": "Puissance phase 1"
+      },
+      "power_p2": {
+        "name": "Puissance phase 2"
+      },
+      "power_p3": {
+        "name": "Puissance phase 3"
+      },
+      "energy": {
+        "name": "Énergie"
+      },
+      "energy_import": {
+        "name": "Énergie importée"
+      },
+      "energy_export": {
+        "name": "Énergie exportée"
+      },
+      "status": {
+        "name": "Statut"
+      },
+      "production_power": {
+        "name": "Production solaire"
+      },
+      "grid_power": {
+        "name": "Puissance réseau"
+      },
+      "house_power": {
+        "name": "Consommation maison"
+      },
+      "production_energy": {
+        "name": "Énergie produite"
+      },
+      "house_energy": {
+        "name": "Énergie consommée maison"
+      }
+    }
+  }
+}
