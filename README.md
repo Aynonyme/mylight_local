@@ -3,7 +3,7 @@
 # MyLight Systems (local) pour Home Assistant
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
-[![Validate](https://github.com/CHANGEME/mylight_local/actions/workflows/validate.yml/badge.svg)](https://github.com/CHANGEME/mylight_local/actions/workflows/validate.yml)
+[![Validate](https://github.com/Aynonyme/mylight_local/actions/workflows/validate.yml/badge.svg)](https://github.com/Aynonyme/mylight_local/actions/workflows/validate.yml)
 
 Intégration **100 % locale** : elle interroge l'interface web de la SmartPlug Master (prise rouge, firmware 1.5.3) via son API JSON-RPC `/rpc`, sans passer par le cloud MyLight.
 
@@ -11,7 +11,7 @@ Intégration **100 % locale** : elle interroge l'interface web de la SmartPlug M
 
 ## Installation
 
-**HACS** : HACS → ⋮ → *Dépôts personnalisés* → `https://github.com/CHANGEME/mylight_local`, catégorie *Intégration* → installer → redémarrer Home Assistant.
+**HACS** : HACS → ⋮ → *Dépôts personnalisés* → `https://github.com/Aynonyme/mylight_local`, catégorie *Intégration* → installer → redémarrer Home Assistant.
 
 **Manuelle** : copier `custom_components/mylight_local` dans `config/custom_components/`, puis redémarrer.
 
