@@ -15,7 +15,7 @@ Intégration **100 % locale** : elle interroge l'interface web de la SmartPlug M
 
 ## Installation
 
-[![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=CHANGEME&repository=mylight_local&category=integration)
+[![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Aynonyme&repository=mylight_local&category=integration)
 [![Ajouter l'intégration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=mylight_local)
 
 
