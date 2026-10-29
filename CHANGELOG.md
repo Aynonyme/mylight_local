@@ -1,6 +1,6 @@
 # Changelog
 
-## Non publié
+## 0.1.1
 - Identifiants d'usine de la SmartPlug Master (`admin` / `welcome`) préremplis dans le formulaire de connexion et de réauthentification.
 
 ## 0.1.0
