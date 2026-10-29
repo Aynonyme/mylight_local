@@ -5,6 +5,8 @@ DOMAIN = "mylight_local"
 
 CONF_SCAN_INTERVAL = "scan_interval"
 DEFAULT_SCAN_INTERVAL = 10  # secondes (la page web officielle rafraîchit toutes les 10 s)
+DEFAULT_USERNAME = "admin"  # identifiants d'usine de la SmartPlug Master
+DEFAULT_PASSWORD = "welcome"
 MIN_SCAN_INTERVAL = 5
 MAX_SCAN_INTERVAL = 300
 

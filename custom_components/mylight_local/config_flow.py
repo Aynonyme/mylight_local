@@ -26,7 +26,9 @@ from .const import (
     CONF_PRODUCTION_DEVICE,
     CONF_SCAN_INTERVAL,
     DEVICE_LABELS,
+    DEFAULT_PASSWORD,
     DEFAULT_SCAN_INTERVAL,
+    DEFAULT_USERNAME,
     DOMAIN,
     MAX_SCAN_INTERVAL,
     MIN_SCAN_INTERVAL,
@@ -73,8 +75,22 @@ class MyLightConfigFlow(ConfigFlow, domain=DOMAIN):
         schema = vol.Schema(
             {
                 vol.Required(CONF_HOST, default=(user_input or {}).get(CONF_HOST, "")): str,
-                vol.Optional(CONF_USERNAME): str,
-                vol.Optional(CONF_PASSWORD): str,
+                vol.Optional(
+                    CONF_USERNAME,
+                    description={
+                        "suggested_value": (user_input or {}).get(
+                            CONF_USERNAME, DEFAULT_USERNAME
+                        )
+                    },
+                ): str,
+                vol.Optional(
+                    CONF_PASSWORD,
+                    description={
+                        "suggested_value": (user_input or {}).get(
+                            CONF_PASSWORD, DEFAULT_PASSWORD
+                        )
+                    },
+                ): str,
             }
         )
         return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
@@ -105,7 +121,13 @@ class MyLightConfigFlow(ConfigFlow, domain=DOMAIN):
             else:
                 return self.async_update_reload_and_abort(entry, data_updates=user_input)
         schema = vol.Schema(
-            {vol.Required(CONF_USERNAME): str, vol.Required(CONF_PASSWORD): str}
+            {
+                vol.Required(
+                    CONF_USERNAME,
+                    default=entry.data.get(CONF_USERNAME, DEFAULT_USERNAME),
+                ): str,
+                vol.Required(CONF_PASSWORD, default=DEFAULT_PASSWORD): str,
+            }
         )
         return self.async_show_form(
             step_id="reauth_confirm", data_schema=schema, errors=errors
